@@ -1,399 +1,871 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skillful Solutions | Professional Plumber in Houston, Texas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-  html { scroll-behavior:smooth; }
-  body { background:#f7f9fc; color:#2b2b2b; }
-  img { max-width:100%; display:block; }
-  a { text-decoration:none; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  /* Top Bar */
-  .topbar {
-    background:#082c47;
-    color:#cfe3f5;
-    font-size:13px;
-    padding:8px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:5px;
-  }
-  .topbar a { color:#f7a600; font-weight:600; }
+  <title>Skillful Solutions | Houston Plumbing Services</title>
+  <meta name="description" content="Contact Skillful Solutions for plumbing service information in Houston, Texas. Call to discuss your plumbing needs and service availability.">
 
-  /* Header */
-  header {
-    background:#ffffff;
-    padding:18px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
-  }
-  .logo {
-    font-size:24px;
-    font-weight:800;
-    color:#0b3d62;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .logo span { color:#f7a600; }
-  nav { display:flex; align-items:center; gap:26px; }
-  nav a { color:#2b2b2b; font-weight:600; font-size:15px; transition:0.3s; }
-  nav a:hover { color:#f7a600; }
-  .call-btn-header {
-    background:#f7a600;
-    color:#0b3d62;
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:700;
-    box-shadow:0 5px 15px rgba(247,166,0,0.4);
-    transition:0.3s;
-  }
-  .call-btn-header:hover { background:#ffb733; transform:translateY(-2px); }
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #194d6b;
+      --teal: #239c9b;
+      --gold: #e9b654;
+      --ink: #1b2d3b;
+      --muted: #647789;
+      --light: #f3f7fa;
+      --white: #ffffff;
+    }
 
-  /* Hero */
-  .hero {
-    background:linear-gradient(120deg, rgba(8,44,71,0.92), rgba(11,61,98,0.85)), url('https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    background-size:cover;
-    background-position:center;
-    color:#fff;
-    padding:120px 25px 100px;
-    text-align:center;
-  }
-  .hero-badge {
-    display:inline-block;
-    background:rgba(247,166,0,0.15);
-    border:1px solid #f7a600;
-    color:#f7a600;
-    padding:7px 18px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:600;
-    margin-bottom:20px;
-  }
-  .hero h1 { font-size:42px; font-weight:800; margin-bottom:18px; line-height:1.3; }
-  .hero h1 span { color:#f7a600; }
-  .hero p { font-size:17px; color:#dce9f5; max-width:600px; margin:0 auto 32px; line-height:1.6; }
-  .hero-buttons { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-  .call-now-btn {
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:#f7a600;
-    color:#0b3d62;
-    font-size:17px;
-    font-weight:700;
-    padding:16px 34px;
-    border-radius:50px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    transition:0.3s;
-  }
-  .call-now-btn:hover { background:#ffb733; transform:scale(1.05); }
-  .secondary-btn {
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-    padding:15px 30px;
-    border-radius:50px;
-    border:2px solid rgba(255,255,255,0.5);
-    transition:0.3s;
-  }
-  .secondary-btn:hover { background:rgba(255,255,255,0.1); border-color:#fff; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* Trust Strip */
-  .trust-strip {
-    background:#fff;
-    padding:22px 20px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:35px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.05);
-  }
-  .trust-item { display:flex; align-items:center; gap:8px; font-weight:600; color:#0b3d62; font-size:14px; }
-  .trust-item .num { font-size:20px; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* Section Heading */
-  .section { padding:80px 25px; max-width:1180px; margin:auto; }
-  .section-head { text-align:center; margin-bottom:50px; }
-  .section-head .tag { color:#f7a600; font-weight:700; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; }
-  .section-head h2 { color:#0b3d62; font-size:32px; font-weight:800; margin-top:10px; }
-  .section-head p { color:#6b7b8c; max-width:550px; margin:12px auto 0; font-size:15px; }
+    body {
+      background: var(--light);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-  /* Services */
-  .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:26px; }
-  .service-card {
-    background:#fff;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,0.06);
-    transition:0.35s;
-  }
-  .service-card:hover { transform:translateY(-8px); box-shadow:0 15px 35px rgba(11,61,98,0.15); }
-  .service-card img { width:100%; height:190px; object-fit:cover; }
-  .service-card .content { padding:24px; }
-  .service-card h3 { color:#0b3d62; margin-bottom:8px; font-size:18px; }
-  .service-card p { color:#6b7b8c; font-size:14px; line-height:1.6; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  /* About */
-  .about { background:linear-gradient(135deg,#0b3d62,#082c47); color:#fff; padding:80px 25px; }
-  .about-grid { max-width:1180px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:55px; align-items:center; }
-  .about-grid img { border-radius:18px; box-shadow:0 20px 50px rgba(0,0,0,0.4); width:100%; height:420px; object-fit:cover; }
-  .about-text .tag { color:#f7a600; font-weight:700; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; }
-  .about-text h2 { font-size:30px; font-weight:800; margin:12px 0 18px; }
-  .about-text p { color:#cfe0ef; line-height:1.8; margin-bottom:22px; font-size:15px; }
-  .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .why-item { display:flex; align-items:flex-start; gap:12px; }
-  .why-item .chk { background:#f7a600; color:#0b3d62; min-width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; }
-  .why-item p { font-size:14px; color:#dce9f5; margin:0; }
-  @media(max-width:768px){ .about-grid{ grid-template-columns:1fr; } }
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-  /* CTA Strip */
-  .cta-strip { background:linear-gradient(90deg,#f7a600,#ffb733); text-align:center; padding:50px 20px; }
-  .cta-strip h2 { color:#0b3d62; margin-bottom:10px; font-size:28px; font-weight:800; }
-  .cta-strip p { color:#5a4000; margin-bottom:22px; font-size:15px; }
-  .cta-strip .call-now-btn { background:#0b3d62; color:#fff; }
-  .cta-strip .call-now-btn:hover { background:#124d7a; }
+    .topbar {
+      background: var(--navy);
+      color: #dce7ee;
+      font-size: 13px;
+      padding: 8px 0;
+    }
 
-  /* Testimonials */
-  .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:26px; }
-  .testimonial-card { background:#fff; padding:30px; border-radius:16px; box-shadow:0 8px 25px rgba(0,0,0,0.06); }
-  .stars { color:#f7a600; font-size:15px; margin-bottom:12px; }
-  .testimonial-card p { color:#4b5b6c; font-size:14px; line-height:1.7; margin-bottom:16px; font-style:italic; }
-  .testimonial-author { display:flex; align-items:center; gap:12px; }
-  .avatar { width:40px; height:40px; border-radius:50%; background:#0b3d62; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
-  .testimonial-author h4 { font-size:14px; color:#0b3d62; }
-  .testimonial-author span { font-size:12px; color:#8a97a5; }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-  /* Contact */
-  .contact-wrap { background:#fff; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.08); display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
-  .contact-info { background:linear-gradient(135deg,#0b3d62,#082c47); color:#fff; padding:50px 36px; }
-  .contact-info h2 { font-size:26px; font-weight:800; margin-bottom:14px; }
-  .contact-info p { color:#cfe0ef; margin-bottom:28px; font-size:14px; line-height:1.7; }
-  .contact-item { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
-  .contact-item .ic { background:rgba(247,166,0,0.15); width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:17px; }
-  .contact-item a, .contact-item span { color:#fff; font-weight:600; font-size:14px; }
-  .contact-cta { padding:50px 36px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
-  .contact-cta h3 { color:#0b3d62; font-size:22px; margin-bottom:12px; font-weight:800; }
-  .contact-cta p { color:#6b7b8c; margin-bottom:24px; font-size:14px; }
-  @media(max-width:768px){ .contact-wrap{ grid-template-columns:1fr; } }
+    .topbar a {
+      color: var(--gold);
+      font-weight: 700;
+    }
 
-  /* Footer */
-  footer { background:#082c47; color:#9db6cc; text-align:center; padding:28px; font-size:13px; }
-  footer span { color:#f7a600; font-weight:700; }
+    .header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 3px 18px rgba(16, 42, 67, 0.08);
+    }
 
-  /* Floating call button */
-  .floating-call {
-    display:none;
-    position:fixed;
-    bottom:20px; right:20px;
-    background:#f7a600;
-    color:#0b3d62;
-    width:58px; height:58px;
-    border-radius:50%;
-    align-items:center; justify-content:center;
-    font-size:24px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    z-index:999;
-  }
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
 
-  @media(max-width:768px){
-    nav { display:none; }
-    .hero h1 { font-size:28px; }
-    .hero p { font-size:15px; }
-    .floating-call { display:flex; }
-  }
-</style>
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .brand b {
+      color: var(--teal);
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #405568;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--teal);
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 0 21px;
+      border-radius: 9px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 7px 18px rgba(233, 182, 84, 0.22);
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #f3c66e;
+      transform: translateY(-2px);
+    }
+
+    .button-dark {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: none;
+    }
+
+    .button-dark:hover {
+      background: var(--blue);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 82px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 20%, rgba(35, 156, 155, 0.34), transparent 28%),
+        linear-gradient(125deg, #102a43, #194d6b 72%, #176c70);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero .eyebrow {
+      padding: 7px 12px;
+      border: 1px solid rgba(233, 182, 84, 0.65);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 680px;
+      margin: 19px 0;
+      font-size: clamp(38px, 5vw, 59px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      color: #d8e4ec;
+      font-size: 17px;
+      margin-bottom: 27px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero .button-outline {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      padding: 0 19px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 9px;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero .button-outline:hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      min-height: 330px;
+      place-items: center;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 50%;
+    }
+
+    .hero-visual::before {
+      width: 310px;
+      height: 310px;
+    }
+
+    .hero-visual::after {
+      width: 245px;
+      height: 245px;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      width: min(340px, 100%);
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 19px;
+      background: rgba(255, 255, 255, 0.97);
+      color: var(--navy);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-card-head {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+    }
+
+    .hero-card-head small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .hero-icon {
+      width: 92px;
+      height: 92px;
+      display: grid;
+      place-items: center;
+      margin: 25px auto 17px;
+      border-radius: 27px;
+      background: #e7f4f2;
+    }
+
+    .hero-icon svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .hero-card h2 {
+      text-align: center;
+      font-size: 21px;
+      line-height: 1.25;
+    }
+
+    .hero-card p {
+      margin: 7px 0 19px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .hero-card .button {
+      width: 100%;
+    }
+
+    .quick-info {
+      background: var(--white);
+      border-bottom: 1px solid #e7edf2;
+    }
+
+    .quick-info-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-height: 76px;
+      padding: 12px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .quick-item + .quick-item {
+      border-left: 1px solid #e7edf2;
+    }
+
+    .quick-number {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin: 0 auto 37px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 8px 0 10px;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 38px);
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      border: 1px solid #e7edf2;
+      border-radius: 15px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(16, 42, 67, 0.12);
+    }
+
+    .service-photo {
+      height: 205px;
+      overflow: hidden;
+      background: #dce8ee;
+    }
+
+    .service-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-card:first-child .service-photo img {
+      object-position: center 68%;
+    }
+
+    .service-content {
+      padding: 20px 21px 23px;
+    }
+
+    .service-content h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .service-content p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .about-section {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .about-copy h2 {
+      max-width: 550px;
+      margin: 9px 0 15px;
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 38px);
+      line-height: 1.2;
+    }
+
+    .about-copy p {
+      max-width: 610px;
+      margin-bottom: 21px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-panel {
+      padding: 27px;
+      border: 1px solid #e3ebf0;
+      border-radius: 17px;
+      background: var(--light);
+    }
+
+    .about-panel h3 {
+      margin-bottom: 17px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-top: 1px solid #dce5eb;
+      font-size: 14px;
+    }
+
+    .info-row span {
+      color: var(--muted);
+    }
+
+    .info-row strong {
+      color: var(--navy);
+      text-align: right;
+    }
+
+    .contact-section {
+      padding: 0 0 78px;
+      background: var(--white);
+    }
+
+    .contact-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 35px;
+      border-radius: 18px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .contact-box h2 {
+      margin-bottom: 6px;
+      font-size: 26px;
+    }
+
+    .contact-box p {
+      color: #cbd8e2;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 25px 0;
+      background: #0b2032;
+      color: #bdcbd5;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    footer p + p {
+      margin-top: 6px;
+      color: #91a4b3;
+    }
+
+    .floating-call {
+      display: none;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        gap: 15px;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 300px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+      }
+
+      .header .button {
+        min-height: 42px;
+        padding: 0 13px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 57px 0 49px;
+      }
+
+      .hero-grid {
+        gap: 22px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .hero-visual {
+        min-height: 290px;
+      }
+
+      .quick-info-inner {
+        grid-template-columns: 1fr;
+        padding: 7px 0;
+      }
+
+      .quick-item {
+        min-height: 48px;
+      }
+
+      .quick-item + .quick-item {
+        border-left: 0;
+        border-top: 1px solid #e7edf2;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-photo {
+        height: 220px;
+      }
+
+      .about-grid {
+        gap: 25px;
+      }
+
+      .contact-section {
+        padding-bottom: 58px;
+      }
+
+      .contact-box {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 26px;
+      }
+
+      .floating-call {
+        position: fixed;
+        right: 14px;
+        bottom: 14px;
+        z-index: 30;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 51px;
+        padding: 0 18px;
+        border-radius: 30px;
+        background: var(--gold);
+        color: var(--navy);
+        font-size: 14px;
+        font-weight: 800;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-<div class="topbar">
-  <span>📍 Serving Houston, TX & Surrounding Areas</span>
-  <span>24/7 Emergency: <a href="tel:+18337046186">+1 (833) 704-6186</a></span>
-</div>
-
-<header>
-  <div class="logo">🔧 Skillful <span>Solutions</span></div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a href="tel:+18337046186" class="call-btn-header">📞 Call Now</a>
-</header>
-
-<section class="hero">
-  <div class="hero-badge">⭐ Houston's #1 Rated Plumbing Company</div>
-  <h1>Fast, Reliable <span>Plumbing Services</span><br>You Can Trust</h1>
-  <p>Licensed & insured plumbers delivering top-quality repairs, installations, and emergency services — 24 hours a day, 7 days a week.</p>
-  <div class="hero-buttons">
-    <a href="tel:+18337046186" class="call-now-btn">📞 Call Now: +1 (833) 704-6186</a>
-    <a href="#services" class="secondary-btn">View Services →</a>
-  </div>
-</section>
-
-<div class="trust-strip">
-  <div class="trust-item"><span class="num">⭐</span> 4.9/5 Rating</div>
-  <div class="trust-item"><span class="num">🛡️</span> Licensed & Insured</div>
-  <div class="trust-item"><span class="num">⏱️</span> 24/7 Emergency Service</div>
-  <div class="trust-item"><span class="num">💯</span> 100% Satisfaction Guaranteed</div>
-</div>
-
-<section class="section" id="services">
-  <div class="section-head">
-    <div class="tag">What We Offer</div>
-    <h2>Our Plumbing Services</h2>
-    <p>From minor repairs to major installations, our expert team handles it all with precision and care.</p>
-  </div>
-  <div class="services-grid">
-
-    <div class="service-card">
-<img src="plumber.jpg" alt="Professional plumber repairing a leaking pipe">      <div class="content">
-        <h3>🚰 Leak Detection & Repair</h3>
-        <p>Advanced leak detection technology to find and fix leaks before they cause major damage.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=500">
-      <div class="content">
-        <h3>🔧 Drain Cleaning</h3>
-        <p>Professional hydro-jetting and snaking services to clear even the toughest clogs.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.pexels.com/photos/8486922/pexels-photo-8486922.jpeg?auto=compress&cs=tinysrgb&w=500">
-      <div class="content">
-        <h3>🚿 Water Heater Services</h3>
-        <p>Installation, repair & maintenance for all tank and tankless water heater models.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.pexels.com/photos/6474361/pexels-photo-6474361.jpeg?auto=compress&cs=tinysrgb&w=500">
-      <div class="content">
-        <h3>🛁 Bathroom Remodeling</h3>
-        <p>Complete bathroom plumbing upgrades, fixture installs, and renovation support.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.pexels.com/photos/6474472/pexels-photo-6474472.jpeg?auto=compress&cs=tinysrgb&w=500">
-      <div class="content">
-        <h3>🏠 Residential Plumbing</h3>
-        <p>Comprehensive home plumbing solutions for every room and every issue.</p>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <img src="https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=500">
-      <div class="content">
-        <h3>🏢 Commercial Plumbing</h3>
-        <p>Reliable, code-compliant plumbing services for offices, retail & commercial spaces.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="about-grid">
-    <img src="https://images.pexels.com/photos/8486925/pexels-photo-8486925.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional Plumber at Work">
-    <div class="about-text">
-      <div class="tag">Why Choose Us</div>
-      <h2>Houston's Most Trusted Plumbing Experts</h2>
-      <p>At Skillful Solutions, we combine years of hands-on experience with honest pricing and top-tier workmanship. Our licensed plumbers are committed to solving your plumbing problems right the first time.</p>
-      <div class="why-grid">
-        <div class="why-item"><div class="chk">✓</div><p>Licensed & Insured Team</p></div>
-        <div class="why-item"><div class="chk">✓</div><p>24/7 Emergency Response</p></div>
-        <div class="why-item"><div class="chk">✓</div><p>Upfront, Honest Pricing</p></div>
-        <div class="why-item"><div class="chk">✓</div><p>100% Satisfaction Guarantee</p></div>
-      </div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Houston, Texas</span>
+      <span>Call: <a href="tel:+18337046186">+1 (833) 704-6186</a></span>
     </div>
   </div>
-</section>
 
-<div class="cta-strip">
-  <h2>Got a Plumbing Emergency?</h2>
-  <p>Our team is standing by 24/7 to help with any plumbing issue, big or small.</p>
-  <a href="tel:+18337046186" class="call-now-btn">📞 Call Now: +1 (833) 704-6186</a>
-</div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Skillful Solutions home">
+        <span class="brand-mark">SS</span>
+        <span>Skillful <b>Solutions</b></span>
+      </a>
 
-<section class="section" id="testimonials">
-  <div class="section-head">
-    <div class="tag">Testimonials</div>
-    <h2>What Our Customers Say</h2>
-  </div>
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>"Fast response, fair pricing, and excellent work. Fixed our water heater same day!"</p>
-      <div class="testimonial-author">
-        <div class="avatar">J</div>
-        <div><h4>James R.</h4><span>Houston, TX</span></div>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button" href="tel:+18337046186">Call Now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Houston, Texas</span>
+          <h1>Plumbing help for <span>home and business.</span></h1>
+          <p class="hero-copy">
+            From leaks and clogged drains to water heaters and bathroom fixtures,
+            contact Skillful Solutions to discuss the plumbing work you need.
+          </p>
+          <div class="hero-buttons">
+            <a class="button" href="tel:+18337046186">Call Now: +1 (833) 704-6186</a>
+            <a class="button-outline" href="#services">View Services</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-head">
+              <span class="brand-mark">SS</span>
+              <span>Skillful Solutions<small>Houston, Texas</small></span>
+            </div>
+
+            <div class="hero-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none">
+                <path d="M32 5C25 16 13 29 13 41a19 19 0 0 0 38 0C51 29 39 16 32 5Z"
+                  fill="#239c9b"/>
+                <path d="M23 42c1 6 5 9 11 10" stroke="#fff" stroke-width="3"
+                  stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <h2>Residential &amp; Commercial Plumbing</h2>
+            <p>Call to discuss your plumbing needs and service availability.</p>
+            <a class="button button-dark" href="tel:+18337046186">Call +1 (833) 704-6186</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-info">
+      <div class="container quick-info-inner">
+        <div class="quick-item"><span class="quick-number">01</span> Houston, Texas</div>
+        <div class="quick-item"><span class="quick-number">02</span> Residential &amp; Commercial</div>
+        <div class="quick-item"><span class="quick-number">03</span> Call to ask about availability</div>
       </div>
     </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>"Professional, clean, and courteous. Highly recommend Skillful Solutions for any plumbing need."</p>
-      <div class="testimonial-author">
-        <div class="avatar">M</div>
-        <div><h4>Maria S.</h4><span>Houston, TX</span></div>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Services</span>
+          <h2>Plumbing Services</h2>
+          <p>Call Skillful Solutions to discuss your project and ask about available service.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/32588548/pexels-photo-32588548.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Plumber in blue uniform repairing a pipe with a wrench"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Leak Detection &amp; Repair</h3>
+              <p>For leaks around pipes, faucets, or fixtures, call to discuss repair options.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/7220892/pexels-photo-7220892.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Plumbing work beneath a kitchen sink"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Drain Cleaning</h3>
+              <p>Ask about help for slow or clogged sinks, tubs, showers, and drains.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/9551366/pexels-photo-9551366.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Water heater installed in a home"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Water Heater Service</h3>
+              <p>Discuss water heater installation, repair, or maintenance options.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/6436774/pexels-photo-6436774.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Bathroom sink, faucet, and fixtures"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Bathroom Plumbing</h3>
+              <p>Plumbing help for bathroom sinks, faucets, toilets, showers, and fixtures.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Hands installing plumbing pipes"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Residential Plumbing</h3>
+              <p>Discuss household plumbing repairs, replacements, and fixture work.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo">
+              <img
+                src="https://images.pexels.com/photos/29248902/pexels-photo-29248902.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100"
+                alt="Commercial water pipes and valves"
+                loading="lazy">
+            </div>
+            <div class="service-content">
+              <h3>Commercial Plumbing</h3>
+              <p>Call to discuss plumbing needs for an office or business property.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p>"Called them for an emergency leak at midnight — they showed up within an hour. Amazing service!"</p>
-      <div class="testimonial-author">
-        <div class="avatar">D</div>
-        <div><h4>David K.</h4><span>Houston, TX</span></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">About Skillful Solutions</span>
+          <h2>Talk with us about your plumbing needs.</h2>
+          <p>
+            Skillful Solutions provides plumbing service information for Houston, Texas.
+            Call to explain the issue, ask whether the service is available, and discuss
+            the next steps for your home or business.
+          </p>
+          <a class="button button-dark" href="tel:+18337046186">Call Now</a>
+        </div>
+
+        <div class="about-panel">
+          <h3>Contact Information</h3>
+          <div class="info-row">
+            <span>Service area</span>
+            <strong>Houston, Texas</strong>
+          </div>
+          <div class="info-row">
+            <span>Services</span>
+            <strong>Home &amp; business</strong>
+          </div>
+          <div class="info-row">
+            <span>Phone</span>
+            <strong><a href="tel:+18337046186">+1 (833) 704-6186</a></strong>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>Need plumbing help?</h2>
+            <p>Call Skillful Solutions to discuss your plumbing needs.</p>
+          </div>
+          <a class="button" href="tel:+18337046186">Call Now: +1 (833) 704-6186</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Skillful Solutions · Houston, Texas · +1 (833) 704-6186</p>
+      <p>Service photos are illustrative stock images, not photos of the company’s actual staff or work.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="section" id="contact">
-  <div class="section-head">
-    <div class="tag">Get In Touch</div>
-    <h2>Contact Skillful Solutions</h2>
-  </div>
-  <div class="contact-wrap">
-    <div class="contact-info">
-      <h2>Let's Fix Your Plumbing Issue Today</h2>
-      <p>Reach out anytime — we're available 24/7 for emergencies and scheduled appointments.</p>
-      <div class="contact-item"><div class="ic">📞</div><a href="tel:+18337046186">+1 (833) 704-6186</a></div>
-      <div class="contact-item"><div class="ic">📍</div><span>Houston, Texas & Surrounding Areas</span></div>
-      <div class="contact-item"><div class="ic">🕒</div><span>Available 24/7, Including Weekends</span></div>
-    </div>
-    <div class="contact-cta">
-      <h3>Need Help Right Now?</h3>
-      <p>Speak directly with our plumbing experts — no waiting, no hassle.</p>
-      <a href="tel:+18337046186" class="call-now-btn">📞 Call Now</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 <span>Skillful Solutions</span> — All Rights Reserved | Houston, Texas</p>
-</footer>
-
-<a href="tel:+18337046186" class="floating-call">📞</a>
-
+  <a class="floating-call" href="tel:+18337046186">☎ &nbsp; Call Now</a>
 </body>
 </html>
